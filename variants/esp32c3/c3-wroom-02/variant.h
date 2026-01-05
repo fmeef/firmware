@@ -11,7 +11,7 @@
 #define USE_RF95
 #define LORA_SCK 5
 #define LORA_MISO 2
-#define LORA_MOSI 1
+#define LORA_MOSI 1x
 #define LORA_CS 3
 
 #define LORA_DIO0 19
