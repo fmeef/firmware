@@ -7,10 +7,6 @@
 
 // #define BUTTON_PIN 13 // BOOT button
 
-#ifdef __cplusplus
-extern "C" {
-#endif // __cplusplus
-
 // #define USE_RF95
 // #define LORA_SCK 5
 // #define LORA_MISO 2
@@ -30,11 +26,6 @@ extern "C" {
 
 #define USE_SX1262 // E22-900M30S uses SX1262
 // #define USE_SX1268 // E22-400M30S uses SX1268
-//#define SX126X_MAX_POWER                                                                                                         \
-//    22 // Outputting 22dBm from SX1262 results in ~30dBm E22-900M30S output (module only uses last stage of the YP2233W PA)
-// #define SX126X_DIO3_TCXO_VOLTAGE 1.8 // E22 series TCXO reference voltage is 1.8V
-
-//#define LED_PIN 8 // RGB LED
 
 #define SX126X_CS 7    // EBYTE module's NSS pin
 #define SX126X_SCK 3    // EBYTE module's SCK pin
@@ -64,7 +55,3 @@ extern "C" {
 #define HAS_GPS 0
 #undef GPS_RX_PIN
 #undef GPS_TX_PIN
-
-#ifdef __cplusplus
-}
-#endif
