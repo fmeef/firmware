@@ -54,6 +54,9 @@
 #define LORA_DIO3  
 
 
+#define BUTTON_NEED_PULLUP
+#define BUTTON_PIN 21
+
 #define HAS_GPS 0
 #undef GPS_RX_PIN
 #undef GPS_TX_PIN
