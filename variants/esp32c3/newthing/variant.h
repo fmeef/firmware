@@ -17,6 +17,8 @@
 // #define LORA_DIO1 4 // not used on pure RF95?
 // #define LORA_RESET 9
 
+#define USE_EINK
+#define PIN_EINK_EN -1
 #define PIN_EINK_MOSI 1
 #define PIN_EINK_SCLK 3
 #define PIN_EINK_CS 0
