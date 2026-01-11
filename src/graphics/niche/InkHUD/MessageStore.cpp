@@ -57,7 +57,6 @@ void InkHUD::MessageStore::saveToFlash()
         f.write('\0');                                                                                    // Append null term
 //        LOG_DEBUG("Wrote message %u, length %u, text \"%s\"", static_cast<uint32_t>(i), min(MAX_MESSAGE_SIZE, m.text.size()),
 //                  m.text.c_str());
-
     }
 
     // Release firmware's SPI lock, because SafeFile::close needs it

@@ -36,14 +36,14 @@ void setupNicheGraphics()
 
     // SPI
     // -----------------------------
-    SPI1.begin();
+    SPI.begin();
 
     // Driver
     // -----------------------------
 
     // Use E-Ink driver
     Drivers::EInk *driver = new Drivers::INKHUD_BUILDCONF_DRIVER;
-    driver->begin(&SPI1, PIN_EINK_DC, PIN_EINK_CS, PIN_EINK_BUSY, PIN_EINK_RES);
+    driver->begin(&SPI, PIN_EINK_DC, PIN_EINK_CS, PIN_EINK_BUSY, PIN_EINK_RES);
 
     // InkHUD
     // ----------------------------
