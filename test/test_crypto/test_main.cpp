@@ -2,8 +2,6 @@
 #include "CryptoEngine.h"
 
 #include "TestUtil.h"
-#include "aes-ccm.h"
-#include <XEdDSA.h>
 #include <unity.h>
 
 void HexToBytes(uint8_t *result, const std::string hex, size_t len = 0)

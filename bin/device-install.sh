@@ -141,10 +141,10 @@ if [[ -f "$FILENAME" && "$FILENAME" == *.factory.bin ]]; then
         echo "Error: file ${FILENAME} wasn't found. Terminating."
         exit 1
     fi
-    if [[ ! -f "$OTAFILE" ]]; then
-        echo "Error: file ${OTAFILE} wasn't found. Terminating."
-        exit 1
-    fi
+    # if [[ ! -f "$OTAFILE" ]]; then
+    #     echo "Error: file ${OTAFILE} wasn't found. Terminating."
+    #     exit 1
+    # fi
     if [[ ! -f "$SPIFFSFILE" ]]; then
         echo "Error: file ${SPIFFSFILE} wasn't found. Terminating."
         exit 1
@@ -153,8 +153,8 @@ if [[ -f "$FILENAME" && "$FILENAME" == *.factory.bin ]]; then
     echo "Trying to flash ${FILENAME}, but first erasing and writing system information"
     $ESPTOOL_CMD ${ESPTOOL_ERASE_FLASH}
     $ESPTOOL_CMD ${ESPTOOL_WRITE_FLASH} $FIRMWARE_OFFSET "${FILENAME}"
-    echo "Trying to flash ${OTAFILE} at offset ${OTA_OFFSET}"
-    $ESPTOOL_CMD ${ESPTOOL_WRITE_FLASH} $OTA_OFFSET "${OTAFILE}"
+    # echo "Trying to flash ${OTAFILE} at offset ${OTA_OFFSET}"
+    # $ESPTOOL_CMD ${ESPTOOL_WRITE_FLASH} $OTA_OFFSET "${OTAFILE}"
     echo "Trying to flash ${SPIFFSFILE}, at offset ${OFFSET}"
     $ESPTOOL_CMD ${ESPTOOL_WRITE_FLASH} $OFFSET "${SPIFFSFILE}"
 
