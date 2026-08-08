@@ -26,9 +26,10 @@
 #define PIN_EINK_BUSY 18
 
 #define DISABLE_INA_CHARGING_DETECTION
-#define HAS_TELEMETRY 0
+#define HAS_TELEMETRY 1
 #define MESHTASTIC_EXCLUDE_I2C 1
 #define MESHTASTIC_EXCLUDE_ACCELEROMETER 1
+#define MESHTASTIC_EXCLUDE_ENVIRONMENTAL_SENSOR 1
 //#define DEBUG_HEAP
 //#define DEBUG_LOOP_TIMING
 
@@ -43,11 +44,12 @@
 #define SX126X_RESET 9 // EBYTE module's NRST pin
 #define SX126X_BUSY 5  // EBYTE module's BUSY pin
 #define SX126X_DIO1 6  // EBYTE module's DIO1 pin
-
-#define SX126X_TXEN 10 // Schematic connects EBYTE module's TXEN pin to MCU
+#define SX126X_TXEN RADIOLIB_NC
+#define SX126X_RXEN RADIOLIB_NC
+//#define SX126X_TXEN 10 // Schematic connects EBYTE module's TXEN pin to MCU
 //#define SX126X_RXEN 10 // Schematic connects EBYTE module's RXEN pin to MCU
-#define SX126X_DIO2_AS_RF_SWITCH
-#define SX126X_DIO3_TCXO_VOLTAGE 3.3
+//#define SX126X_DIO2_AS_RF_SWITCH
+//#define SX126X_DIO3_TCXO_VOLTAGE 3.3
 
 #define LORA_CS SX126X_CS       // Compatibility with variant file configuration structure
 #define LORA_SCK SX126X_SCK     // Compatibility with variant file configuration structure
@@ -57,8 +59,10 @@
 #define LORA_TXEN SX126X_TXEN   // Compatibility with variant file configuration structure
 #define LORA_RXEN SX126X_RXEN   // Compatibility with variant file configuration structure
 #define LORA_RESET SX126X_RESET // Compatibility with variant file configuration structure
-#define LORA_DIO2 SX126X_BUSY   // Compatibility with variant file configuration structur
-//#define LORA_DIO3  
+#define LORA_DIO2 RADIOLIB_NC   // Compatibility with variant file configuration structur
+#define LORA_DIO0 RADIOLIB_NC   // Compatibility with variant file configuration structur
+#define LORA_BUSY SX126X_BUSY
+#define LORA_DIO3 
 
 #define BUTTON_NEED_PULLUP
 #define BUTTON_PIN 21

@@ -327,7 +327,7 @@ template <typename T> void SX126xInterface<T>::setStandby()
     int err = lora.standby();
 
     if (err != RADIOLIB_ERR_NONE)
-        LOG_DEBUG("SX126x standby %s%d", radioLibErr, err);
+        LOG_INFO("SX126x standby %s%d", radioLibErr, err);
 #ifdef ARCH_PORTDUINO
     if (err != RADIOLIB_ERR_NONE)
         portduino_status.LoRa_in_error = true;
